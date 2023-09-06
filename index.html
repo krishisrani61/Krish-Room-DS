@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.11.4, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/" /></head>
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en">
+    <section class="u-clearfix u-section-1" id="sec-bffa">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
+          <script src="https://cdn.logwork.com/widget/text.js"></script>
+          <a href="https://logwork.com/current-time-in-manhasset-united-states-new-york" class="clock-widget-text" data-timezone="America/New_York" data-language="en">Manhasset, United States</a>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-c249">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
+          <div id="howlongogogo_container"></div>
+          <p id="howlongagogo_p">Create your own countdown on <a href="https://howlongagogo.com">howlongagogo.com</a>
+          </p>
+          <script> var howlongagogo_options = { 
+                    'date': '2023-06-23',
+                    'time': '08:50',
+                    'name': 'Days Until The End Of School',
+                    'name_color': '000000',
+                    'date_color': '666666',
+                    'bg_color': 'ffffff',
+                    'show_date': true,
+                } </script>
+          <script defer="defer" src="https://howlongagogo.com/js/widget.v2.js" id="howlongaogog_js"></script>
+        </div>
+        <div class="u-clearfix u-custom-html u-custom-html-2">
+          <title></title>
+          <style> #countdown {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-align: center;
+        color: #333;
+      }
+      #timer {
+        font-family: Arial, sans-serif;
+        font-size: 36px;
+        text-align: center;
+        color: #333;
+      } </style>
+          <div id="countdown">This will turn off in:</div>
+          <div id="timer"></div>
+          <script> // Function to calculate the time remaining until 23:00
+      function calculateTimeRemaining() {
+        var targetTime = new Date();
+        targetTime.setHours(23, 0, 0, 0);
+        var currentTime = new Date();
+        var timeRemaining = targetTime - currentTime;
+        // If the target time has already passed for today, set it for tomorrow
+        if (timeRemaining < 0) {
+          targetTime.setDate(targetTime.getDate() + 1);
+          timeRemaining = targetTime - currentTime;
+        }
+        return timeRemaining;
+      }
+      // Function to update the countdown timer
+      function updateCountdown() {
+        var countdownElement = document.getElementById("timer");
+        var timeRemaining = calculateTimeRemaining();
+        // Update the countdown timer every second
+        var interval = setInterval(function () {
+          // Calculate the remaining hours, minutes, and seconds
+          var hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+          var minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
+          var seconds = Math.floor((timeRemaining / 1000) % 60);
+          // Format the time components as a string
+          var timeString =
+            hours.toString().padStart(2, "0") +
+            ":" +
+            minutes.toString().padStart(2, "0") +
+            ":" +
+            seconds.toString().padStart(2, "0");
+          // Display the countdown timer
+          countdownElement.innerHTML = timeString;
+          // Update the time remaining
+          timeRemaining -= 1000;
+          // If the countdown has reached zero, reset it for the next day
+          if (timeRemaining < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = "Countdown finished!";
+            setTimeout(updateCountdown, 1000);
+          }
+        }, 1000);
+      }
+      // Call the updateCountdown function initially to start the countdown
+      updateCountdown(); </script>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-b955">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    </section>
+    
+    
+    
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  
+</body></html>
