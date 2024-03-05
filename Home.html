@@ -39,9 +39,9 @@
           <p id="howlongagogo_p">Create your own countdown on <a href="https://howlongagogo.com">howlongagogo.com</a>
           </p>
           <script> var howlongagogo_options = { 
-                    'date': '2024-02-17',
+                    'date': '2024-05-07',
                     'time': '00:00',
-                    'name': "Days Until my Febuary Break",
+                    'name': "Days Until Canada Trip",
                     'name_color': '000000',
                     'date_color': '6c8094',
                     'bg_color': 'ffffff',
@@ -50,69 +50,7 @@
           <script defer="defer" src="https://howlongagogo.com/js/widget.v2.js" id="howlongaogog_js"></script>
         </div>
         <div class="u-clearfix u-custom-html u-custom-html-2">
-          <title></title>
-          <style> #countdown {
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        text-align: center;
-        color: #000000;
-      }
-      #timer {
-        font-family: Arial, sans-serif;
-        font-size: 36px;
-        text-align: center;
-        color: #333;
-      } </style>
-          <div id="countdown">This will turn off in:</div>
-          <div id="timer"></div>
-          <script> // Function to calculate the time remaining until 23:00
-      function calculateTimeRemaining() {
-        var targetTime = new Date();
-        targetTime.setHours(0, 0, 0, 0);
-        var currentTime = new Date();
-        var timeRemaining = targetTime - currentTime;
-        // If the target time has already passed for today, set it for tomorrow
-        if (timeRemaining < 0) {
-          targetTime.setDate(targetTime.getDate() + 1);
-          timeRemaining = targetTime - currentTime;
-        }
-        return timeRemaining;
-      }
-      // Function to update the countdown timer
-      function updateCountdown() {
-        var countdownElement = document.getElementById("timer");
-        var timeRemaining = calculateTimeRemaining();
-        // Update the countdown timer every second
-        var interval = setInterval(function () {
-          // Calculate the remaining hours, minutes, and seconds
-          var hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
-          var minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
-          var seconds = Math.floor((timeRemaining / 1000) % 60);
-          // Format the time components as a string
-          var timeString =
-            hours.toString().padStart(2, "0") +
-            ":" +
-            minutes.toString().padStart(2, "0") +
-            ":" +
-            seconds.toString().padStart(2, "0");
-          // Display the countdown timer
-          countdownElement.innerHTML = timeString;
-          // Update the time remaining
-          timeRemaining -= 1000;
-          // If the countdown has reached zero, reset it for the next day
-          if (timeRemaining < 0) {
-            clearInterval(interval);
-            countdownElement.innerHTML = "";
-            setTimeout(updateCountdown, 1000);
-          }
-        }, 1000);
-      }
-      // Call the updateCountdown function initially to start the countdown
-      updateCountdown(); </script>
-        </div>
-      </div>
-
-
+        
 
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
